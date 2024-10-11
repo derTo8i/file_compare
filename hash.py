@@ -1,5 +1,4 @@
-# hash.py V1.0
-# ©Tobias Lippe 19.04.2024
+# ©Tobias Lippe 11.10.2024
 # This programm inputs a file and outputs hash values of it. 
 # Additionally it compares given value with the calculated ones and shows which algorithm matches. 
 
@@ -75,7 +74,7 @@ def dict_to_array(dict):
     array = list(dict)
     print(array)
 
-def compare(bytes, hash_to_compare):
+def compare_to_hash(bytes, hash_to_compare):
     hash_dict = get_all_hashes(bytes)
     value_array = list(hash_dict.values())
 
@@ -88,7 +87,7 @@ def compare(bytes, hash_to_compare):
     return False
 
 
-def Start():
+def setup():
     file = filedialog.askopenfilename() #"D:/#/##/BlueJ/Bank-Mey/README.TXT"
 
     if file != "":
@@ -116,7 +115,7 @@ def Start():
     
     elif mode == "2":
         hash_to_compare = input("Input hash: ")
-        result = compare(bytes, hash_to_compare)
+        result = compare_to_hash(bytes, hash_to_compare)
         if not result:
             print("No match")
         else:
@@ -128,4 +127,4 @@ def Start():
 error = 0
 if __name__ == "__main__":
     while True and error == 0:
-        error = Start()
+        error = setup()
