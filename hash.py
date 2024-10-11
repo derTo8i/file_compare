@@ -1,57 +1,53 @@
-# ©Tobias Lippe 11.10.2024
-# This programm inputs a file and outputs hash values of it. 
-# Additionally it compares given value with the calculated ones and shows which algorithm matches. 
-
-import hashlib
+from hashlib import md5, sha1, sha224, sha256, sha384, sha512, sha3_224, sha3_256, sha3_384, sha3_512
 from tkinter import filedialog
 
 def get_md5(bytes):
-    hash = hashlib.md5()
+    hash = md5()
     hash.update(bytes)
     return hash.hexdigest()
 
 def get_sha1(bytes):
-    hash = hashlib.sha1()
+    hash = sha1()
     hash.update(bytes)
     return hash.hexdigest()
 
 def get_sha224(bytes):
-    hash = hashlib.sha224()
+    hash = sha224()
     hash.update(bytes)
     return hash.hexdigest()
 
 def get_sha256(bytes):
-    hash = hashlib.sha256()
+    hash = sha256()
     hash.update(bytes)
     return hash.hexdigest()
 
 def get_sha384(bytes):
-    hash = hashlib.sha384()
+    hash = sha384()
     hash.update(bytes)
     return hash.hexdigest()
 
 def get_sha512(bytes):
-    hash = hashlib.sha512()
+    hash = sha512()
     hash.update(bytes)
     return hash.hexdigest()
 
 def get_sha3_224(bytes):
-    hash = hashlib.sha3_224()
+    hash = sha3_224()
     hash.update(bytes)
     return hash.hexdigest()
 
 def get_sha3_256(bytes):
-    hash = hashlib.sha3_256()
+    hash = sha3_256()
     hash.update(bytes)
     return hash.hexdigest()
 
 def get_sha3_384(bytes):
-    hash = hashlib.sha3_384()
+    hash = sha3_384()
     hash.update(bytes)
     return hash.hexdigest()
 
 def get_sha3_512(bytes):
-    hash = hashlib.sha3_512()
+    hash = sha3_512()
     hash.update(bytes)
     return hash.hexdigest()
 
